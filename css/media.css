@@ -1,0 +1,163 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+	html {
+		font-size: 10px;
+	}
+
+	.foliac-logo {
+		width: 145px;
+		height: 85px;
+	}
+
+	.foliac-menu {
+		line-height: 81px;
+	}
+
+	.foliac-menu li {
+		margin-left: 30px;
+	}
+
+	.foliac-menu li::after {
+		margin-left: 35px;
+	}
+
+	.foliac-author {
+		background-position: -450px 0;
+	}
+
+	.foliac-about {
+		padding-left: 37.7%;
+		width: 97%;
+	}
+
+	.foliac-about [class$="-grey"] {
+		color: #fff;
+	}
+
+	.foliac-contact button[type="submit"] {
+		width: 250px;
+		margin: 0 auto;
+		display: block;
+	}
+
+	.foliac-footer ul li {
+		margin-left: 25px;
+	}
+
+	.foliac-grid-height {
+		height: 305px;
+	}
+
+	.foliac-portfolio-item {
+		margin-bottom: 25px;
+	}
+
+	.foliac-portfolio-item img {
+		height: 100%;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+	html {
+		font-size: 8px;
+	}
+
+	.foliac-header {
+		height: 100vh;
+	}
+
+	.foliac-logo {
+		width: 100px;
+		height: 57px;
+		margin: 0 auto 10px;
+		float: none;
+		display: block;
+	}
+
+	.foliac-menu {
+		float: none;
+		line-height: 1;
+	}
+
+	.foliac-menu li {
+		margin-left: 7px;
+	}
+
+	.foliac-menu li::after {
+		margin-left: 10px;
+	}
+
+	.foliac-portfolio {
+		padding: 20px 0;
+	}
+
+	.foliac-about {
+		padding-left: 0;
+		width: 100%;
+	}
+
+	.foliac-author {
+		background: none;
+		padding: 20px 0 40px;
+	}
+
+	.foliac-about [class$="-grey"] {
+		color: #fff;
+	}
+
+	.foliac-contact .container {
+		width: 100%;
+	}
+
+	.foliac-form-input,
+	.foliac-form-input:first-child {
+		width: 100%;
+		padding-right: 0;
+		margin-bottom: 10px;
+	}
+
+	.foliac-footer {
+		height: auto;
+		padding: 20px 0;
+	}
+
+	.foliac-footer p {
+		line-height: 1;
+		float: none;
+	}
+
+	.foliac-footer ul {
+		float: none;
+		margin-top: 20px;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+@media (max-width: 480px) {
+	.ui-tabs .foliac-portfolio-menu {
+		flex-direction: column;
+		margin-bottom: 15px;
+	}
+
+	.ui-tabs .foliac-portfolio-menu li,
+	.ui-tabs .foliac-portfolio-menu li.ui-tabs-active {
+		margin-bottom: 10px;
+	}
+
+	.foliac-portfolio-menu li a {
+		width: 100%;
+	}
+
+	.foliac-portfolio-item {
+		width: 100%;
+	}
+
+	.gallery {
+		flex-direction: column;
+	}
+
+	.gallery a {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}

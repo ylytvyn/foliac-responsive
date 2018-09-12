@@ -1,0 +1,541 @@
+:root {
+	--color-green: #48bf72;
+	--color-grey: #3c4955;
+	--font: Lato, sans-serif;
+}
+
+/* Fonts */
+@font-face {
+    font-family: BigJohn;
+    src: url('fonts/BigJohn/bigjohn-webfont.eot');
+    src: url('fonts/BigJohn/bigjohn-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BigJohn/bigjohn-webfont.woff2') format('woff2'),
+         url('fonts/BigJohn/bigjohn-webfont.woff') format('woff'),
+         url('fonts/BigJohn/bigjohn-webfont.ttf') format('truetype'),
+         url('fonts/BigJohn/bigjohn-webfont.svg#BigJohn') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: SlimJoe;
+    src: url('fonts/SlimJoe/slimjoe-webfont.eot');
+    src: url('fonts/SlimJoe/slimjoe-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/SlimJoe/slimjoe-webfont.woff2') format('woff2'),
+         url('fonts/SlimJoe/slimjoe-webfont.woff') format('woff'),
+         url('fonts/SlimJoe/slimjoe-webfont.ttf') format('truetype'),
+         url('fonts/SlimJoe/slimjoe-webfont.svg#SlimJoe') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset styles */
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+	transition: all .3s ease-in-out;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+	font: 16px var(--font);
+	min-width: 320px;
+	background: #f9f9f9;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+/* Main Styles */
+.container {
+	max-width: 1180px;
+	width: 100%;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+.foliac-header {
+	background-color: var(--color-grey);
+	height: 650px;
+	text-align: center;
+	overflow: hidden;
+}
+
+.foliac-header nav {
+	overflow: hidden;
+	padding: 35px 0;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	width: 100%;
+	background: rgba(60, 73, 85, .8);
+}
+
+.foliac-header.scrolled nav {
+	padding: 10px 0;
+}
+
+.slider {
+	width: 100%;
+	height: 100%;
+}
+
+.slide {
+	height: 100%;
+	display: flex!important;
+	align-items: center;
+	padding-top: 100px;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+.slick-list,
+.slick-track {
+	height: 100%;
+}
+
+.foliac-logo {
+	float: left;
+	width: 175px;
+	height: 100px;
+	background: url('../images/logo.png') no-repeat;
+    background-size: cover;
+}
+
+.foliac-logo:hover {
+	transform: scale(.9);
+}
+
+.foliac-menu {
+	float: right;
+	line-height: 96px;
+}
+
+.foliac-menu li {
+	display: inline-block;
+	margin-left: 45px;
+}
+
+.foliac-menu li:first-child {
+	margin-left: 0;
+}
+
+.foliac-menu li::after {
+	content: '/';
+	margin-left: 55px;
+	color: rgba(255, 255, 255, .2);
+	font-size: 22px;
+	position: relative;
+	bottom: -3px;
+}
+
+.foliac-menu li:last-child::after {
+	display: none;
+}
+
+.foliac-menu li a {
+	color: #fff;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.foliac-menu li a:hover {
+	color: var(--color-green);
+}
+
+.foliac-titles {
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.foliac-titles h1 {
+	font: 2.875rem BigJohn, sans-serif;
+	margin-bottom: 17px;
+}
+
+.foliac-titles h2 {
+	font: 1.875rem SlimJoe, sans-serif;
+	margin-bottom: 53px;
+	letter-spacing: 1.1px;
+}
+
+[class^="foliac-btn"] {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 25px;
+	text-transform: uppercase;
+	border: 2px solid;
+	border-radius: 3px;
+	text-decoration: none;
+	padding: 10px 20px;
+}
+
+[class^="foliac-btn"]:hover {
+	color: #fff;
+}
+
+[class$="-green"] {
+	color: var(--color-green);
+}
+
+[class$="-grey"] {
+	color: var(--color-grey);
+}
+
+.foliac-footer {
+	background: var(--color-grey);
+	height: 200px;
+	color: #fff;
+}
+
+.foliac-footer p {
+	float: left;
+	line-height: 196px;
+}
+
+.foliac-footer p a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.foliac-footer p a:hover {
+	color: var(--color-green);
+}
+
+.foliac-footer ul {
+	float: right;
+	font-size: 0;
+	margin-top: 72px;
+}
+
+.foliac-footer ul li {
+	display: inline-block;
+	margin-left: 40px;
+}
+
+.foliac-footer ul li:first-child {
+	margin-left: 0;
+}
+
+.foliac-footer ul li:hover {
+	transform: scale(.9);
+}
+
+.foliac-contact .container{
+	width: 740px;
+	padding: 45px 20px 53px;
+}
+
+.foliac-contact .foliac-form-title {
+	font: 26px BigJohn, sans-serif;
+	color: var(--color-green);
+	text-align: center;
+	margin-bottom: 51px;
+	text-transform: uppercase;
+}
+
+.foliac-contact button[type="submit"] {
+	width: 100%;
+	height: 50px;
+	border-radius: 3px;
+	font: 700 14px var(--font);
+	color: #fff;
+	background: var(--color-green);
+	cursor: pointer;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.foliac-contact button[type="submit"]:hover {
+	background: var(--color-grey);
+}
+
+[class^="foliac-form-"] {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+[class^="foliac-form-"] input,
+[class^="foliac-form-"] textarea {
+	font: 700 16px/25px var(--font);
+	color: #a6a5a5;
+	background: #f1f1f1;
+	width: 100%;
+	border: 2px solid var(--color-grey);
+	border-radius: 3px;
+	padding: 10px 20px 10px 73px;
+	resize: vertical;
+}
+
+[class^="foliac-form-"] input:focus,
+[class^="foliac-form-"] textarea:focus {
+	border-color: var(--color-green);
+}
+
+[class^="foliac-form-"] input:focus + label,
+[class^="foliac-form-"] textarea:focus + label {
+	background-color: var(--color-green);
+}
+
+.foliac-form-textarea textarea {
+	min-height: 230px;
+	transition-property: border-color;
+}
+
+.foliac-contact form {
+	font-size: 0;
+}
+
+.foliac-form-input {
+	width: calc(50% - 15px);
+	display: inline-block;
+}
+
+.foliac-form-input:first-child {
+	padding-right: 30px;
+	width: calc(50% + 15px);
+}
+
+[class^="foliac-form-"] label {
+	width: 50px;
+	height: 100%;
+	background-color: var(--color-grey);
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+[class^="foliac-form-"] label::after {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(60, 73, 85, 0);
+	border-left-color: var(--color-grey);
+	border-width: 6px;
+	margin-top: -6px;
+	transition: all .3s ease-in-out;
+}
+
+[class^="foliac-form-"] input:focus + label::after,
+[class^="foliac-form-"] textarea:focus + label::after {
+	border-left-color: var(--color-green);
+}
+
+.foliac-form-textarea label::after {
+	top: 26px;
+}
+
+.foliac-contact [for="foliac-name"] {
+	background-image: url('../images/person.png');
+	background-position: center;
+}
+
+.foliac-contact [for="foliac-email"] {
+	background-image: url('../images/mail.png');
+	background-position: center;
+}
+
+.foliac-contact [for="foliac-text"] {
+	background-image: url('../images/crayon.png');
+	background-position: center 16px;
+}
+
+.foliac-portfolio {
+	padding: 96px 0 59px;
+}
+
+.foliac-portfolio-menu {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.ui-tabs .foliac-portfolio-menu {
+	margin-bottom: 56px;
+}
+
+.foliac-portfolio-menu li {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.ui-tabs .foliac-portfolio-menu li {
+	margin: 0 7px;
+}
+
+.foliac-portfolio-menu li a {
+	color: var(--color-grey);
+	text-decoration: none;
+	padding: 7px 15px;
+	background: #eaeaea;
+	border-radius: 2px;
+}
+
+.foliac-portfolio-menu li a:hover,
+.foliac-portfolio-menu li.ui-tabs-active a {
+	background: var(--color-green);
+	color: #fff;
+}
+
+.foliac-grid-1 {
+	width: 39.5%;
+}
+
+.foliac-grid-2 {
+	width: 57%;
+}
+
+.foliac-portfolio-items {
+	overflow: hidden;
+	width: 100%;
+}
+
+.foliac-portfolio-item {
+	float: left;
+	margin: 0 3.5% 40px 0;
+	height: 305px;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+}
+
+.foliac-portfolio-item:nth-child(2n) {
+	margin-right: 0;
+}
+
+.foliac-grid-height {
+	height: 435px;
+}
+
+.foliac-portfolio-item img {
+	min-width: 100%;
+	min-height: 100%;
+	max-width: none;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.foliac-portfolio-item-hover {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: rgba(72, 191, 114, .8);
+	color: #fff;
+	text-align: center;
+	line-height: 30px;
+	top: -100%;
+}
+
+.foliac-portfolio-item:hover .foliac-portfolio-item-hover {
+	top: 0;
+}
+
+.foliac-portfolio-item-hover h2 {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.foliac-portfolio-item-hover div {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.foliac-author {
+	background: url('../images/man-bg.jpg') no-repeat top center;
+	position: relative;
+	padding: 85px 0 97px;
+}
+
+.foliac-author::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(60, 73, 85, .7);
+}
+
+.foliac-about {
+	position: relative;
+	z-index: 1;
+	color: #fff;
+	padding-left: 51.7%;
+	width: 90%;
+}
+
+.foliac-about h2 {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 39px;
+}
+
+.foliac-about h3 {
+	font-size: 22px;
+	margin-bottom: 30px;
+}
+
+.foliac-about p {
+	line-height: 26px;
+	margin-bottom: 40px;
+}
+
+.ui-tooltip {
+	background: rgba(255,255,255,.9);
+	box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
+	transition: none;
+	position: absolute;
+}
+
+.gallery {
+	display: flex;
+	justify-content: space-between;
+}
+
+.gallery a {
+	width: 30%;
+	height: 200px;
+	overflow: hidden;
+}
+
+.gallery img {
+	height: 100%;
+	min-width: 100%;
+	max-width: none;
+}
+
+.fancybox-container * {
+	transition: none;
+}
